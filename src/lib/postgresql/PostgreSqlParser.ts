@@ -570,43 +570,47 @@ export class PostgreSqlParser extends SQLParserBase {
     public static readonly UnterminatedQuotedIdentifier = 551;
     public static readonly InvalidQuotedIdentifier = 552;
     public static readonly InvalidUnterminatedQuotedIdentifier = 553;
-    public static readonly UnicodeQuotedIdentifier = 554;
-    public static readonly UnterminatedUnicodeQuotedIdentifier = 555;
-    public static readonly InvalidUnicodeQuotedIdentifier = 556;
-    public static readonly InvalidUnterminatedUnicodeQuotedIdentifier = 557;
-    public static readonly StringConstant = 558;
-    public static readonly UnterminatedStringConstant = 559;
-    public static readonly UnicodeEscapeStringConstant = 560;
-    public static readonly UnterminatedUnicodeEscapeStringConstant = 561;
-    public static readonly BeginDollarStringConstant = 562;
-    public static readonly BinaryStringConstant = 563;
-    public static readonly UnterminatedBinaryStringConstant = 564;
-    public static readonly InvalidBinaryStringConstant = 565;
-    public static readonly InvalidUnterminatedBinaryStringConstant = 566;
-    public static readonly HexadecimalStringConstant = 567;
-    public static readonly UnterminatedHexadecimalStringConstant = 568;
-    public static readonly InvalidHexadecimalStringConstant = 569;
-    public static readonly InvalidUnterminatedHexadecimalStringConstant = 570;
-    public static readonly Integral = 571;
-    public static readonly NumericFail = 572;
-    public static readonly Numeric = 573;
-    public static readonly PLSQLVARIABLENAME = 574;
-    public static readonly PLSQLIDENTIFIER = 575;
-    public static readonly Whitespace = 576;
-    public static readonly Newline = 577;
-    public static readonly LineComment = 578;
-    public static readonly BlockComment = 579;
-    public static readonly UnterminatedBlockComment = 580;
-    public static readonly MetaCommand = 581;
-    public static readonly EndMetaCommand = 582;
-    public static readonly ErrorCharacter = 583;
-    public static readonly EscapeStringConstant = 584;
-    public static readonly UnterminatedEscapeStringConstant = 585;
-    public static readonly InvalidEscapeStringConstant = 586;
-    public static readonly InvalidUnterminatedEscapeStringConstant = 587;
-    public static readonly DollarText = 588;
-    public static readonly EndDollarStringConstant = 589;
-    public static readonly AfterEscapeStringConstantWithNewlineMode_Continued = 590;
+    public static readonly CurlyQuotedIdentifier = 554;
+    public static readonly UnterminatedCurlyQuotedIdentifier = 555;
+    public static readonly InvalidCurlyQuotedIdentifier = 556;
+    public static readonly InvalidUnterminatedCurlyQuotedIdentifier = 557;
+    public static readonly UnicodeQuotedIdentifier = 558;
+    public static readonly UnterminatedUnicodeQuotedIdentifier = 559;
+    public static readonly InvalidUnicodeQuotedIdentifier = 560;
+    public static readonly InvalidUnterminatedUnicodeQuotedIdentifier = 561;
+    public static readonly StringConstant = 562;
+    public static readonly UnterminatedStringConstant = 563;
+    public static readonly UnicodeEscapeStringConstant = 564;
+    public static readonly UnterminatedUnicodeEscapeStringConstant = 565;
+    public static readonly BeginDollarStringConstant = 566;
+    public static readonly BinaryStringConstant = 567;
+    public static readonly UnterminatedBinaryStringConstant = 568;
+    public static readonly InvalidBinaryStringConstant = 569;
+    public static readonly InvalidUnterminatedBinaryStringConstant = 570;
+    public static readonly HexadecimalStringConstant = 571;
+    public static readonly UnterminatedHexadecimalStringConstant = 572;
+    public static readonly InvalidHexadecimalStringConstant = 573;
+    public static readonly InvalidUnterminatedHexadecimalStringConstant = 574;
+    public static readonly Integral = 575;
+    public static readonly NumericFail = 576;
+    public static readonly Numeric = 577;
+    public static readonly PLSQLVARIABLENAME = 578;
+    public static readonly PLSQLIDENTIFIER = 579;
+    public static readonly Whitespace = 580;
+    public static readonly Newline = 581;
+    public static readonly LineComment = 582;
+    public static readonly BlockComment = 583;
+    public static readonly UnterminatedBlockComment = 584;
+    public static readonly MetaCommand = 585;
+    public static readonly EndMetaCommand = 586;
+    public static readonly ErrorCharacter = 587;
+    public static readonly EscapeStringConstant = 588;
+    public static readonly UnterminatedEscapeStringConstant = 589;
+    public static readonly InvalidEscapeStringConstant = 590;
+    public static readonly InvalidUnterminatedEscapeStringConstant = 591;
+    public static readonly DollarText = 592;
+    public static readonly EndDollarStringConstant = 593;
+    public static readonly AfterEscapeStringConstantWithNewlineMode_Continued = 594;
     public static readonly RULE_program = 0;
     public static readonly RULE_singleStmt = 1;
     public static readonly RULE_stmt = 2;
@@ -1175,8 +1179,8 @@ export class PostgreSqlParser extends SQLParserBase {
         "'BUFFER_USAGE_LIMIT'", null, null, null, null, null, null, null, 
         null, null, null, null, null, null, null, null, null, null, null, 
         null, null, null, null, null, null, null, null, null, null, null, 
-        null, null, null, null, "'\\\\'", null, null, null, null, null, 
-        null, null, "'''"
+        null, null, null, null, null, null, null, null, "'\\\\'", null, 
+        null, null, null, null, null, null, "'''"
     ];
 
     public static readonly symbolicNames = [
@@ -1287,16 +1291,17 @@ export class PostgreSqlParser extends SQLParserBase {
         "KW_RESTRICTIVE", "KW_COMPRESSION", "KW_PLAIN", "KW_EXTENDED", "KW_MAIN", 
         "KW_SKIP_LOCKED", "KW_BUFFER_USAGE_LIMIT", "Identifier", "QuotedIdentifier", 
         "UnterminatedQuotedIdentifier", "InvalidQuotedIdentifier", "InvalidUnterminatedQuotedIdentifier", 
-        "UnicodeQuotedIdentifier", "UnterminatedUnicodeQuotedIdentifier", 
-        "InvalidUnicodeQuotedIdentifier", "InvalidUnterminatedUnicodeQuotedIdentifier", 
-        "StringConstant", "UnterminatedStringConstant", "UnicodeEscapeStringConstant", 
-        "UnterminatedUnicodeEscapeStringConstant", "BeginDollarStringConstant", 
-        "BinaryStringConstant", "UnterminatedBinaryStringConstant", "InvalidBinaryStringConstant", 
-        "InvalidUnterminatedBinaryStringConstant", "HexadecimalStringConstant", 
-        "UnterminatedHexadecimalStringConstant", "InvalidHexadecimalStringConstant", 
-        "InvalidUnterminatedHexadecimalStringConstant", "Integral", "NumericFail", 
-        "Numeric", "PLSQLVARIABLENAME", "PLSQLIDENTIFIER", "Whitespace", 
-        "Newline", "LineComment", "BlockComment", "UnterminatedBlockComment", 
+        "CurlyQuotedIdentifier", "UnterminatedCurlyQuotedIdentifier", "InvalidCurlyQuotedIdentifier", 
+        "InvalidUnterminatedCurlyQuotedIdentifier", "UnicodeQuotedIdentifier", 
+        "UnterminatedUnicodeQuotedIdentifier", "InvalidUnicodeQuotedIdentifier", 
+        "InvalidUnterminatedUnicodeQuotedIdentifier", "StringConstant", 
+        "UnterminatedStringConstant", "UnicodeEscapeStringConstant", "UnterminatedUnicodeEscapeStringConstant", 
+        "BeginDollarStringConstant", "BinaryStringConstant", "UnterminatedBinaryStringConstant", 
+        "InvalidBinaryStringConstant", "InvalidUnterminatedBinaryStringConstant", 
+        "HexadecimalStringConstant", "UnterminatedHexadecimalStringConstant", 
+        "InvalidHexadecimalStringConstant", "InvalidUnterminatedHexadecimalStringConstant", 
+        "Integral", "NumericFail", "Numeric", "PLSQLVARIABLENAME", "PLSQLIDENTIFIER", 
+        "Whitespace", "Newline", "LineComment", "BlockComment", "UnterminatedBlockComment", 
         "MetaCommand", "EndMetaCommand", "ErrorCharacter", "EscapeStringConstant", 
         "UnterminatedEscapeStringConstant", "InvalidEscapeStringConstant", 
         "InvalidUnterminatedEscapeStringConstant", "DollarText", "EndDollarStringConstant", 
@@ -1447,7 +1452,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 935;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            while (_la === 2 || _la === 31 || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 570441729) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 142606337) !== 0) || _la === 105 || _la === 129 || ((((_la - 138)) & ~0x1F) === 0 && ((1 << (_la - 138)) & 2159673601) !== 0) || ((((_la - 177)) & ~0x1F) === 0 && ((1 << (_la - 177)) & 100680739) !== 0) || ((((_la - 241)) & ~0x1F) === 0 && ((1 << (_la - 241)) & 1090557953) !== 0) || ((((_la - 290)) & ~0x1F) === 0 && ((1 << (_la - 290)) & 679839745) !== 0) || ((((_la - 322)) & ~0x1F) === 0 && ((1 << (_la - 322)) & 272417) !== 0) || ((((_la - 358)) & ~0x1F) === 0 && ((1 << (_la - 358)) & 6401) !== 0) || ((((_la - 422)) & ~0x1F) === 0 && ((1 << (_la - 422)) & 4196353) !== 0) || _la === 454 || _la === 525 || _la === 581) {
+            while (_la === 2 || _la === 31 || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & 570441729) !== 0) || ((((_la - 65)) & ~0x1F) === 0 && ((1 << (_la - 65)) & 142606337) !== 0) || _la === 105 || _la === 129 || ((((_la - 138)) & ~0x1F) === 0 && ((1 << (_la - 138)) & 2159673601) !== 0) || ((((_la - 177)) & ~0x1F) === 0 && ((1 << (_la - 177)) & 100680739) !== 0) || ((((_la - 241)) & ~0x1F) === 0 && ((1 << (_la - 241)) & 1090557953) !== 0) || ((((_la - 290)) & ~0x1F) === 0 && ((1 << (_la - 290)) & 679839745) !== 0) || ((((_la - 322)) & ~0x1F) === 0 && ((1 << (_la - 322)) & 272417) !== 0) || ((((_la - 358)) & ~0x1F) === 0 && ((1 << (_la - 358)) & 6401) !== 0) || ((((_la - 422)) & ~0x1F) === 0 && ((1 << (_la - 422)) & 4196353) !== 0) || _la === 454 || _la === 525 || _la === 585) {
                 {
                 {
                 this.state = 932;
@@ -2339,7 +2344,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 1062;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 582) {
+                if (_la === 586) {
                     {
                     this.state = 1061;
                     this.match(PostgreSqlParser.EndMetaCommand);
@@ -4256,7 +4261,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 1271;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 1270;
                     this.schema_name_create();
@@ -10991,7 +10996,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 2106;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (((((_la - 42)) & ~0x1F) === 0 && ((1 << (_la - 42)) & 2099209) !== 0) || ((((_la - 85)) & ~0x1F) === 0 && ((1 << (_la - 85)) & 2147491841) !== 0) || ((((_la - 120)) & ~0x1F) === 0 && ((1 << (_la - 120)) & 4294966809) !== 0) || ((((_la - 152)) & ~0x1F) === 0 && ((1 << (_la - 152)) & 4294967295) !== 0) || ((((_la - 184)) & ~0x1F) === 0 && ((1 << (_la - 184)) & 4294967295) !== 0) || ((((_la - 216)) & ~0x1F) === 0 && ((1 << (_la - 216)) & 4290781183) !== 0) || ((((_la - 248)) & ~0x1F) === 0 && ((1 << (_la - 248)) & 4294967295) !== 0) || ((((_la - 280)) & ~0x1F) === 0 && ((1 << (_la - 280)) & 4294967295) !== 0) || ((((_la - 312)) & ~0x1F) === 0 && ((1 << (_la - 312)) & 4294967295) !== 0) || ((((_la - 344)) & ~0x1F) === 0 && ((1 << (_la - 344)) & 4294967295) !== 0) || ((((_la - 376)) & ~0x1F) === 0 && ((1 << (_la - 376)) & 4294967295) !== 0) || ((((_la - 408)) & ~0x1F) === 0 && ((1 << (_la - 408)) & 4294967295) !== 0) || ((((_la - 440)) & ~0x1F) === 0 && ((1 << (_la - 440)) & 4294950911) !== 0) || ((((_la - 473)) & ~0x1F) === 0 && ((1 << (_la - 473)) & 3221225471) !== 0) || ((((_la - 506)) & ~0x1F) === 0 && ((1 << (_la - 506)) & 286719) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                if (((((_la - 42)) & ~0x1F) === 0 && ((1 << (_la - 42)) & 2099209) !== 0) || ((((_la - 85)) & ~0x1F) === 0 && ((1 << (_la - 85)) & 2147491841) !== 0) || ((((_la - 120)) & ~0x1F) === 0 && ((1 << (_la - 120)) & 4294966809) !== 0) || ((((_la - 152)) & ~0x1F) === 0 && ((1 << (_la - 152)) & 4294967295) !== 0) || ((((_la - 184)) & ~0x1F) === 0 && ((1 << (_la - 184)) & 4294967295) !== 0) || ((((_la - 216)) & ~0x1F) === 0 && ((1 << (_la - 216)) & 4290781183) !== 0) || ((((_la - 248)) & ~0x1F) === 0 && ((1 << (_la - 248)) & 4294967295) !== 0) || ((((_la - 280)) & ~0x1F) === 0 && ((1 << (_la - 280)) & 4294967295) !== 0) || ((((_la - 312)) & ~0x1F) === 0 && ((1 << (_la - 312)) & 4294967295) !== 0) || ((((_la - 344)) & ~0x1F) === 0 && ((1 << (_la - 344)) & 4294967295) !== 0) || ((((_la - 376)) & ~0x1F) === 0 && ((1 << (_la - 376)) & 4294967295) !== 0) || ((((_la - 408)) & ~0x1F) === 0 && ((1 << (_la - 408)) & 4294967295) !== 0) || ((((_la - 440)) & ~0x1F) === 0 && ((1 << (_la - 440)) & 4294950911) !== 0) || ((((_la - 473)) & ~0x1F) === 0 && ((1 << (_la - 473)) & 3221225471) !== 0) || ((((_la - 506)) & ~0x1F) === 0 && ((1 << (_la - 506)) & 286719) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 2105;
                     this.tableelementlist();
@@ -12992,7 +12997,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 2566;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 2565;
                 this.any_name();
@@ -13240,7 +13245,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 2603;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 2600;
                 this.errorHandler.sync(this);
@@ -13865,7 +13870,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 2736;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 12 || _la === 13 || _la === 571 || _la === 573) {
+                if (_la === 12 || _la === 13 || _la === 575 || _la === 577) {
                     {
                     this.state = 2735;
                     this.numericonly();
@@ -13985,7 +13990,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 2763;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 12 || _la === 13 || _la === 571 || _la === 573) {
+                if (_la === 12 || _la === 13 || _la === 575 || _la === 577) {
                     {
                     this.state = 2762;
                     this.numericonly();
@@ -15123,7 +15128,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 2996;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (((((_la - 42)) & ~0x1F) === 0 && ((1 << (_la - 42)) & 2099209) !== 0) || ((((_la - 85)) & ~0x1F) === 0 && ((1 << (_la - 85)) & 2147491841) !== 0) || ((((_la - 120)) & ~0x1F) === 0 && ((1 << (_la - 120)) & 4294966809) !== 0) || ((((_la - 152)) & ~0x1F) === 0 && ((1 << (_la - 152)) & 4294967295) !== 0) || ((((_la - 184)) & ~0x1F) === 0 && ((1 << (_la - 184)) & 4294967295) !== 0) || ((((_la - 216)) & ~0x1F) === 0 && ((1 << (_la - 216)) & 4290781183) !== 0) || ((((_la - 248)) & ~0x1F) === 0 && ((1 << (_la - 248)) & 4294967295) !== 0) || ((((_la - 280)) & ~0x1F) === 0 && ((1 << (_la - 280)) & 4294967295) !== 0) || ((((_la - 312)) & ~0x1F) === 0 && ((1 << (_la - 312)) & 4294967295) !== 0) || ((((_la - 344)) & ~0x1F) === 0 && ((1 << (_la - 344)) & 4294967295) !== 0) || ((((_la - 376)) & ~0x1F) === 0 && ((1 << (_la - 376)) & 4294967295) !== 0) || ((((_la - 408)) & ~0x1F) === 0 && ((1 << (_la - 408)) & 4294967295) !== 0) || ((((_la - 440)) & ~0x1F) === 0 && ((1 << (_la - 440)) & 4294950911) !== 0) || ((((_la - 473)) & ~0x1F) === 0 && ((1 << (_la - 473)) & 3221225471) !== 0) || ((((_la - 506)) & ~0x1F) === 0 && ((1 << (_la - 506)) & 286719) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                if (((((_la - 42)) & ~0x1F) === 0 && ((1 << (_la - 42)) & 2099209) !== 0) || ((((_la - 85)) & ~0x1F) === 0 && ((1 << (_la - 85)) & 2147491841) !== 0) || ((((_la - 120)) & ~0x1F) === 0 && ((1 << (_la - 120)) & 4294966809) !== 0) || ((((_la - 152)) & ~0x1F) === 0 && ((1 << (_la - 152)) & 4294967295) !== 0) || ((((_la - 184)) & ~0x1F) === 0 && ((1 << (_la - 184)) & 4294967295) !== 0) || ((((_la - 216)) & ~0x1F) === 0 && ((1 << (_la - 216)) & 4290781183) !== 0) || ((((_la - 248)) & ~0x1F) === 0 && ((1 << (_la - 248)) & 4294967295) !== 0) || ((((_la - 280)) & ~0x1F) === 0 && ((1 << (_la - 280)) & 4294967295) !== 0) || ((((_la - 312)) & ~0x1F) === 0 && ((1 << (_la - 312)) & 4294967295) !== 0) || ((((_la - 344)) & ~0x1F) === 0 && ((1 << (_la - 344)) & 4294967295) !== 0) || ((((_la - 376)) & ~0x1F) === 0 && ((1 << (_la - 376)) & 4294967295) !== 0) || ((((_la - 408)) & ~0x1F) === 0 && ((1 << (_la - 408)) & 4294967295) !== 0) || ((((_la - 440)) & ~0x1F) === 0 && ((1 << (_la - 440)) & 4294950911) !== 0) || ((((_la - 473)) & ~0x1F) === 0 && ((1 << (_la - 473)) & 3221225471) !== 0) || ((((_la - 506)) & ~0x1F) === 0 && ((1 << (_la - 506)) & 286719) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 2995;
                     this.tableelementlist();
@@ -19081,7 +19086,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 3441;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                    if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                         {
                         this.state = 3440;
                         this.tablefuncelementlist();
@@ -19101,7 +19106,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 3453;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if (((((_la - 558)) & ~0x1F) === 0 && ((1 << (_la - 558)) & 67108885) !== 0)) {
+                    if (((((_la - 562)) & ~0x1F) === 0 && ((1 << (_la - 562)) & 67108885) !== 0)) {
                         {
                         this.state = 3446;
                         this.sconst();
@@ -22128,7 +22133,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 4054;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 12 || _la === 13 || _la === 571) {
+                if (_la === 12 || _la === 13 || _la === 575) {
                     {
                     this.state = 4053;
                     this.signediconst();
@@ -24048,7 +24053,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 4308;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 4307;
                 this.colid();
@@ -24365,7 +24370,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 4392;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || _la === 68 || ((((_la - 101)) & ~0x1F) === 0 && ((1 << (_la - 101)) & 4294967265) !== 0) || ((((_la - 133)) & ~0x1F) === 0 && ((1 << (_la - 133)) & 4294967295) !== 0) || ((((_la - 165)) & ~0x1F) === 0 && ((1 << (_la - 165)) & 4294967295) !== 0) || ((((_la - 197)) & ~0x1F) === 0 && ((1 << (_la - 197)) & 4294967295) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || _la === 68 || ((((_la - 101)) & ~0x1F) === 0 && ((1 << (_la - 101)) & 4294967265) !== 0) || ((((_la - 133)) & ~0x1F) === 0 && ((1 << (_la - 133)) & 4294967295) !== 0) || ((((_la - 165)) & ~0x1F) === 0 && ((1 << (_la - 165)) & 4294967295) !== 0) || ((((_la - 197)) & ~0x1F) === 0 && ((1 << (_la - 197)) & 4294967295) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 4384;
                 this.func_arg_with_default();
@@ -24947,7 +24952,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 4431;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || _la === 68 || ((((_la - 101)) & ~0x1F) === 0 && ((1 << (_la - 101)) & 4294967265) !== 0) || ((((_la - 133)) & ~0x1F) === 0 && ((1 << (_la - 133)) & 4294967295) !== 0) || ((((_la - 165)) & ~0x1F) === 0 && ((1 << (_la - 165)) & 4294967295) !== 0) || ((((_la - 197)) & ~0x1F) === 0 && ((1 << (_la - 197)) & 4294967295) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || _la === 68 || ((((_la - 101)) & ~0x1F) === 0 && ((1 << (_la - 101)) & 4294967265) !== 0) || ((((_la - 133)) & ~0x1F) === 0 && ((1 << (_la - 133)) & 4294967295) !== 0) || ((((_la - 165)) & ~0x1F) === 0 && ((1 << (_la - 165)) & 4294967295) !== 0) || ((((_la - 197)) & ~0x1F) === 0 && ((1 << (_la - 197)) & 4294967295) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 4430;
                 this.func_args_list();
@@ -25936,7 +25941,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 4528;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 53 || _la === 68 || ((((_la - 101)) & ~0x1F) === 0 && ((1 << (_la - 101)) & 4294967265) !== 0) || ((((_la - 133)) & ~0x1F) === 0 && ((1 << (_la - 133)) & 4294967295) !== 0) || ((((_la - 165)) & ~0x1F) === 0 && ((1 << (_la - 165)) & 4294967295) !== 0) || ((((_la - 197)) & ~0x1F) === 0 && ((1 << (_la - 197)) & 4294967295) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                if (_la === 53 || _la === 68 || ((((_la - 101)) & ~0x1F) === 0 && ((1 << (_la - 101)) & 4294967265) !== 0) || ((((_la - 133)) & ~0x1F) === 0 && ((1 << (_la - 133)) & 4294967295) !== 0) || ((((_la - 165)) & ~0x1F) === 0 && ((1 << (_la - 165)) & 4294967295) !== 0) || ((((_la - 197)) & ~0x1F) === 0 && ((1 << (_la - 197)) & 4294967295) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 4527;
                     this.func_args_list();
@@ -26783,7 +26788,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 4708;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            while (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            while (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 {
                 this.state = 4703;
@@ -36058,7 +36063,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 }
                 this.state = 6277;
                 _la = this.tokenStream.LA(1);
-                if(!(_la === 571 || _la === 573)) {
+                if(!(_la === 575 || _la === 577)) {
                 this.errorHandler.recoverInline(this);
                 }
                 else {
@@ -36925,7 +36930,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 6470;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                    if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                         {
                         this.state = 6469;
                         this.colid();
@@ -40134,7 +40139,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 6655;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (((((_la - 53)) & ~0x1F) === 0 && ((1 << (_la - 53)) & 50331649) !== 0) || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 32767) !== 0) || ((((_la - 433)) & ~0x1F) === 0 && ((1 << (_la - 433)) & 4291821567) !== 0) || ((((_la - 465)) & ~0x1F) === 0 && ((1 << (_la - 465)) & 4278187359) !== 0) || ((((_la - 497)) & ~0x1F) === 0 && ((1 << (_la - 497)) & 146800319) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                if (((((_la - 53)) & ~0x1F) === 0 && ((1 << (_la - 53)) & 50331649) !== 0) || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 32767) !== 0) || ((((_la - 433)) & ~0x1F) === 0 && ((1 << (_la - 433)) & 4291821567) !== 0) || ((((_la - 465)) & ~0x1F) === 0 && ((1 << (_la - 465)) & 4278187359) !== 0) || ((((_la - 497)) & ~0x1F) === 0 && ((1 << (_la - 497)) & 146800319) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 6651;
                     this.errorHandler.sync(this);
@@ -40532,7 +40537,7 @@ export class PostgreSqlParser extends SQLParserBase {
                         this.state = 6653;
                         this.errorHandler.sync(this);
                         _la = this.tokenStream.LA(1);
-                    } while (((((_la - 53)) & ~0x1F) === 0 && ((1 << (_la - 53)) & 50331649) !== 0) || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 32767) !== 0) || ((((_la - 433)) & ~0x1F) === 0 && ((1 << (_la - 433)) & 4291821567) !== 0) || ((((_la - 465)) & ~0x1F) === 0 && ((1 << (_la - 465)) & 4278187359) !== 0) || ((((_la - 497)) & ~0x1F) === 0 && ((1 << (_la - 497)) & 146800319) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584);
+                    } while (((((_la - 53)) & ~0x1F) === 0 && ((1 << (_la - 53)) & 50331649) !== 0) || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 32767) !== 0) || ((((_la - 433)) & ~0x1F) === 0 && ((1 << (_la - 433)) & 4291821567) !== 0) || ((((_la - 465)) & ~0x1F) === 0 && ((1 << (_la - 465)) & 4278187359) !== 0) || ((((_la - 497)) & ~0x1F) === 0 && ((1 << (_la - 497)) & 146800319) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588);
                     }
                 }
 
@@ -40650,7 +40655,7 @@ export class PostgreSqlParser extends SQLParserBase {
                             this.state = 6675;
                             this.errorHandler.sync(this);
                             _la = this.tokenStream.LA(1);
-                            if (_la === 571) {
+                            if (_la === 575) {
                                 {
                                 this.state = 6674;
                                 this.match(PostgreSqlParser.Integral);
@@ -42713,7 +42718,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 6983;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 6982;
                     this.expression();
@@ -43748,7 +43753,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 7137;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 32767) !== 0) || ((((_la - 433)) & ~0x1F) === 0 && ((1 << (_la - 433)) & 4291821567) !== 0) || ((((_la - 465)) & ~0x1F) === 0 && ((1 << (_la - 465)) & 4278187359) !== 0) || ((((_la - 497)) & ~0x1F) === 0 && ((1 << (_la - 497)) & 146800319) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+                if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 32767) !== 0) || ((((_la - 433)) & ~0x1F) === 0 && ((1 << (_la - 433)) & 4291821567) !== 0) || ((((_la - 465)) & ~0x1F) === 0 && ((1 << (_la - 465)) & 4278187359) !== 0) || ((((_la - 497)) & ~0x1F) === 0 && ((1 << (_la - 497)) & 146800319) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 7133;
                     this.extract_arg();
@@ -43833,7 +43838,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 7168;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763019) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763019) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 7164;
                     this.primaryExpression(0);
@@ -43858,7 +43863,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 7174;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 7173;
                     this.substr_list();
@@ -43902,7 +43907,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 7183;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                         {
                         this.state = 7182;
                         this.expression();
@@ -45202,7 +45207,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 7385;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+            if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 7384;
                 this.expr_list();
@@ -47017,7 +47022,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 7517;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                         {
                         this.state = 7516;
                         this.expression();
@@ -47029,7 +47034,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 7521;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                         {
                         this.state = 7520;
                         this.expression();
@@ -48101,7 +48106,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 7674;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                while (_la === 588) {
+                while (_la === 592) {
                     {
                     {
                     this.state = 7671;
@@ -49458,7 +49463,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 7819;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 7818;
                 this.any_identifier();
@@ -50383,7 +50388,7 @@ export class PostgreSqlParser extends SQLParserBase {
                     this.state = 7915;
                     this.errorHandler.sync(this);
                     _la = this.tokenStream.LA(1);
-                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                    if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                         {
                         this.state = 7914;
                         this.expr_list();
@@ -50411,7 +50416,7 @@ export class PostgreSqlParser extends SQLParserBase {
                 this.state = 7925;
                 this.errorHandler.sync(this);
                 _la = this.tokenStream.LA(1);
-                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 487696527) !== 0) || _la === 584) {
+                if ((((_la) & ~0x1F) === 0 && ((1 << _la) & 805318660) !== 0) || ((((_la - 35)) & ~0x1F) === 0 && ((1 << (_la - 35)) & 34074721) !== 0) || ((((_la - 75)) & ~0x1F) === 0 && ((1 << (_la - 75)) & 2174763023) !== 0) || ((((_la - 107)) & ~0x1F) === 0 && ((1 << (_la - 107)) & 4294967295) !== 0) || ((((_la - 139)) & ~0x1F) === 0 && ((1 << (_la - 139)) & 4294967295) !== 0) || ((((_la - 171)) & ~0x1F) === 0 && ((1 << (_la - 171)) & 4294967295) !== 0) || ((((_la - 203)) & ~0x1F) === 0 && ((1 << (_la - 203)) & 67108863) !== 0) || ((((_la - 238)) & ~0x1F) === 0 && ((1 << (_la - 238)) & 4294967295) !== 0) || ((((_la - 270)) & ~0x1F) === 0 && ((1 << (_la - 270)) & 4294967295) !== 0) || ((((_la - 302)) & ~0x1F) === 0 && ((1 << (_la - 302)) & 4294967295) !== 0) || ((((_la - 334)) & ~0x1F) === 0 && ((1 << (_la - 334)) & 4294967295) !== 0) || ((((_la - 366)) & ~0x1F) === 0 && ((1 << (_la - 366)) & 4294967295) !== 0) || ((((_la - 398)) & ~0x1F) === 0 && ((1 << (_la - 398)) & 4294967295) !== 0) || ((((_la - 430)) & ~0x1F) === 0 && ((1 << (_la - 430)) & 4278190079) !== 0) || ((((_la - 462)) & ~0x1F) === 0 && ((1 << (_la - 462)) & 4294967295) !== 0) || ((((_la - 494)) & ~0x1F) === 0 && ((1 << (_la - 494)) & 1174402559) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 3508176911) !== 0) || _la === 579 || _la === 588) {
                     {
                     this.state = 7924;
                     this.expr_list();
@@ -51493,7 +51498,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 8083;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 8082;
                 this.any_identifier();
@@ -51852,7 +51857,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 8164;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 8163;
                 this.any_identifier();
@@ -52459,7 +52464,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 8295;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 36 || _la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 36 || _la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 8292;
                 this.errorHandler.sync(this);
@@ -52574,7 +52579,7 @@ export class PostgreSqlParser extends SQLParserBase {
             this.state = 8323;
             this.errorHandler.sync(this);
             _la = this.tokenStream.LA(1);
-            if (_la === 36 || _la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 402696335) !== 0) || _la === 584) {
+            if (_la === 36 || _la === 53 || ((((_la - 116)) & ~0x1F) === 0 && ((1 << (_la - 116)) & 4294959489) !== 0) || ((((_la - 148)) & ~0x1F) === 0 && ((1 << (_la - 148)) & 4294967295) !== 0) || ((((_la - 180)) & ~0x1F) === 0 && ((1 << (_la - 180)) & 4294967295) !== 0) || ((((_la - 212)) & ~0x1F) === 0 && ((1 << (_la - 212)) & 4227989503) !== 0) || ((((_la - 244)) & ~0x1F) === 0 && ((1 << (_la - 244)) & 4294967295) !== 0) || ((((_la - 276)) & ~0x1F) === 0 && ((1 << (_la - 276)) & 4294967295) !== 0) || ((((_la - 308)) & ~0x1F) === 0 && ((1 << (_la - 308)) & 4294967295) !== 0) || ((((_la - 340)) & ~0x1F) === 0 && ((1 << (_la - 340)) & 4294967295) !== 0) || ((((_la - 372)) & ~0x1F) === 0 && ((1 << (_la - 372)) & 4294967295) !== 0) || ((((_la - 404)) & ~0x1F) === 0 && ((1 << (_la - 404)) & 4294967295) !== 0) || ((((_la - 436)) & ~0x1F) === 0 && ((1 << (_la - 436)) & 4294705151) !== 0) || ((((_la - 468)) & ~0x1F) === 0 && ((1 << (_la - 468)) & 4294967279) !== 0) || ((((_la - 500)) & ~0x1F) === 0 && ((1 << (_la - 500)) & 18350039) !== 0) || ((((_la - 547)) & ~0x1F) === 0 && ((1 << (_la - 547)) & 2148173839) !== 0) || _la === 579 || _la === 588) {
                 {
                 this.state = 8320;
                 this.errorHandler.sync(this);
@@ -54281,7 +54286,7 @@ export class PostgreSqlParser extends SQLParserBase {
     }
 
     public static readonly _serializedATN: number[] = [
-        4,1,590,8495,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,
+        4,1,594,8495,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,
         7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,
         13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,
         20,7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,
@@ -55196,7 +55201,7 @@ export class PostgreSqlParser extends SQLParserBase {
         382,382,2,0,151,151,254,254,2,0,133,133,138,138,1,0,31,32,2,0,128,
         128,547,547,2,0,60,60,96,96,2,0,99,99,349,349,2,0,131,131,414,414,
         2,0,201,201,334,334,3,0,59,59,70,70,97,97,2,0,30,30,56,56,1,0,527,
-        528,2,0,207,207,268,268,2,0,320,320,414,414,2,0,571,571,573,573,
+        528,2,0,207,207,268,268,2,0,320,320,414,414,2,0,575,575,577,577,
         1,0,468,469,4,0,113,113,115,115,119,119,126,126,2,0,360,360,477,
         477,2,0,394,395,409,409,2,0,391,392,406,406,1,0,391,392,1,0,418,
         419,5,0,10,10,16,17,21,21,23,23,25,25,3,0,9,9,14,14,27,27,2,0,98,
@@ -55367,7 +55372,7 @@ export class PostgreSqlParser extends SQLParserBase {
         1065,3,468,234,0,1052,1065,3,320,160,0,1053,1065,3,466,233,0,1054,
         1065,3,552,276,0,1055,1065,3,504,252,0,1056,1065,3,60,30,0,1057,
         1065,3,36,18,0,1058,1065,3,68,34,0,1059,1065,3,476,238,0,1060,1062,
-        5,581,0,0,1061,1063,5,582,0,0,1062,1061,1,0,0,0,1062,1063,1,0,0,
+        5,585,0,0,1061,1063,5,586,0,0,1062,1061,1,0,0,0,1062,1063,1,0,0,
         0,1063,1065,1,0,0,0,1064,944,1,0,0,0,1064,945,1,0,0,0,1064,946,1,
         0,0,0,1064,947,1,0,0,0,1064,948,1,0,0,0,1064,949,1,0,0,0,1064,950,
         1,0,0,0,1064,951,1,0,0,0,1064,952,1,0,0,0,1064,953,1,0,0,0,1064,
@@ -55423,7 +55428,7 @@ export class PostgreSqlParser extends SQLParserBase {
         1,0,0,0,1119,1101,1,0,0,0,1119,1102,1,0,0,0,1119,1103,1,0,0,0,1119,
         1104,1,0,0,0,1119,1105,1,0,0,0,1119,1108,1,0,0,0,1119,1111,1,0,0,
         0,1119,1114,1,0,0,0,1119,1116,1,0,0,0,1119,1118,1,0,0,0,1120,11,
-        1,0,0,0,1121,1130,3,10,5,0,1122,1123,5,348,0,0,1123,1130,5,571,0,
+        1,0,0,0,1121,1130,3,10,5,0,1122,1123,5,348,0,0,1123,1130,5,575,0,
         0,1124,1125,7,3,0,0,1125,1130,3,816,408,0,1126,1127,5,68,0,0,1127,
         1128,7,1,0,0,1128,1130,3,816,408,0,1129,1121,1,0,0,0,1129,1122,1,
         0,0,0,1129,1124,1,0,0,0,1129,1126,1,0,0,0,1130,13,1,0,0,0,1131,1132,
@@ -55712,8 +55717,8 @@ export class PostgreSqlParser extends SQLParserBase {
         5,11,0,0,1904,1906,3,286,143,0,1905,1901,1,0,0,0,1905,1903,1,0,0,
         0,1905,1906,1,0,0,0,1906,105,1,0,0,0,1907,1908,5,62,0,0,1908,1909,
         5,422,0,0,1909,1910,5,105,0,0,1910,1911,5,2,0,0,1911,1912,3,822,
-        411,0,1912,1919,5,571,0,0,1913,1914,5,6,0,0,1914,1915,3,822,411,
-        0,1915,1916,5,571,0,0,1916,1918,1,0,0,0,1917,1913,1,0,0,0,1918,1921,
+        411,0,1912,1919,5,575,0,0,1913,1914,5,6,0,0,1914,1915,3,822,411,
+        0,1915,1916,5,575,0,0,1916,1918,1,0,0,0,1917,1913,1,0,0,0,1918,1921,
         1,0,0,0,1919,1917,1,0,0,0,1919,1920,1,0,0,0,1920,1922,1,0,0,0,1921,
         1919,1,0,0,0,1922,1923,5,3,0,0,1923,1937,1,0,0,0,1924,1925,5,62,
         0,0,1925,1926,5,422,0,0,1926,1927,5,68,0,0,1927,1937,3,534,267,0,
@@ -56019,7 +56024,7 @@ export class PostgreSqlParser extends SQLParserBase {
         1,0,0,0,2765,2738,1,0,0,0,2765,2743,1,0,0,0,2765,2745,1,0,0,0,2765,
         2747,1,0,0,0,2765,2750,1,0,0,0,2765,2753,1,0,0,0,2765,2758,1,0,0,
         0,2766,201,1,0,0,0,2767,2769,7,29,0,0,2768,2767,1,0,0,0,2768,2769,
-        1,0,0,0,2769,2770,1,0,0,0,2770,2773,5,573,0,0,2771,2773,3,812,406,
+        1,0,0,0,2769,2770,1,0,0,0,2770,2773,5,577,0,0,2771,2773,3,812,406,
         0,2772,2768,1,0,0,0,2772,2771,1,0,0,0,2773,203,1,0,0,0,2774,2776,
         5,46,0,0,2775,2777,3,366,183,0,2776,2775,1,0,0,0,2776,2777,1,0,0,
         0,2777,2779,1,0,0,0,2778,2780,5,359,0,0,2779,2778,1,0,0,0,2779,2780,
@@ -56216,7 +56221,7 @@ export class PostgreSqlParser extends SQLParserBase {
         3322,3324,1,0,0,0,3323,3321,1,0,0,0,3323,3322,1,0,0,0,3324,3329,
         1,0,0,0,3325,3326,5,6,0,0,3326,3328,3,270,135,0,3327,3325,1,0,0,
         0,3328,3331,1,0,0,0,3329,3327,1,0,0,0,3329,3330,1,0,0,0,3330,269,
-        1,0,0,0,3331,3329,1,0,0,0,3332,3337,5,571,0,0,3333,3337,5,573,0,
+        1,0,0,0,3331,3329,1,0,0,0,3332,3337,5,575,0,0,3333,3337,5,577,0,
         0,3334,3337,3,808,404,0,3335,3337,3,824,412,0,3336,3332,1,0,0,0,
         3336,3333,1,0,0,0,3336,3334,1,0,0,0,3336,3335,1,0,0,0,3337,271,1,
         0,0,0,3338,3340,5,77,0,0,3339,3338,1,0,0,0,3339,3340,1,0,0,0,3340,
@@ -56298,14 +56303,14 @@ export class PostgreSqlParser extends SQLParserBase {
         0,0,3558,3559,1,0,0,0,3559,3560,5,36,0,0,3560,3565,3,298,149,0,3561,
         3562,5,6,0,0,3562,3564,3,298,149,0,3563,3561,1,0,0,0,3564,3567,1,
         0,0,0,3565,3563,1,0,0,0,3565,3566,1,0,0,0,3566,297,1,0,0,0,3567,
-        3565,1,0,0,0,3568,3569,5,278,0,0,3569,3570,5,571,0,0,3570,3572,3,
+        3565,1,0,0,0,3568,3569,5,278,0,0,3569,3570,5,575,0,0,3570,3572,3,
         414,207,0,3571,3573,3,412,206,0,3572,3571,1,0,0,0,3572,3573,1,0,
         0,0,3573,3581,1,0,0,0,3574,3579,5,62,0,0,3575,3580,5,325,0,0,3576,
         3577,5,83,0,0,3577,3578,5,147,0,0,3578,3580,3,316,158,0,3579,3575,
         1,0,0,0,3579,3576,1,0,0,0,3580,3582,1,0,0,0,3581,3574,1,0,0,0,3581,
         3582,1,0,0,0,3582,3584,1,0,0,0,3583,3585,5,302,0,0,3584,3583,1,0,
         0,0,3584,3585,1,0,0,0,3585,3595,1,0,0,0,3586,3587,5,211,0,0,3587,
-        3589,5,571,0,0,3588,3590,3,528,264,0,3589,3588,1,0,0,0,3589,3590,
+        3589,5,575,0,0,3588,3590,3,528,264,0,3589,3588,1,0,0,0,3589,3590,
         1,0,0,0,3590,3591,1,0,0,0,3591,3595,3,382,191,0,3592,3593,5,345,
         0,0,3593,3595,3,652,326,0,3594,3568,1,0,0,0,3594,3586,1,0,0,0,3594,
         3592,1,0,0,0,3595,299,1,0,0,0,3596,3597,5,46,0,0,3597,3598,5,278,
@@ -56318,7 +56323,7 @@ export class PostgreSqlParser extends SQLParserBase {
         0,0,3617,3622,3,304,152,0,3618,3619,5,6,0,0,3619,3621,3,304,152,
         0,3620,3618,1,0,0,0,3621,3624,1,0,0,0,3622,3620,1,0,0,0,3622,3623,
         1,0,0,0,3623,3626,1,0,0,0,3624,3622,1,0,0,0,3625,3607,1,0,0,0,3625,
-        3616,1,0,0,0,3626,303,1,0,0,0,3627,3628,7,43,0,0,3628,3629,5,571,
+        3616,1,0,0,0,3626,303,1,0,0,0,3627,3628,7,43,0,0,3628,3629,5,575,
         0,0,3629,3630,3,528,264,0,3630,305,1,0,0,0,3631,3632,5,301,0,0,3632,
         3633,5,281,0,0,3633,3634,5,147,0,0,3634,3635,3,816,408,0,3635,3636,
         5,94,0,0,3636,3637,3,814,407,0,3637,307,1,0,0,0,3638,3661,5,191,
@@ -57416,10 +57421,10 @@ export class PostgreSqlParser extends SQLParserBase {
         6665,6666,5,53,0,0,6666,6668,3,682,341,0,6667,6661,1,0,0,0,6667,
         6665,1,0,0,0,6668,651,1,0,0,0,6669,6671,5,415,0,0,6670,6669,1,0,
         0,0,6670,6671,1,0,0,0,6671,6672,1,0,0,0,6672,6689,3,654,327,0,6673,
-        6675,5,4,0,0,6674,6676,5,571,0,0,6675,6674,1,0,0,0,6675,6676,1,0,
+        6675,5,4,0,0,6674,6676,5,575,0,0,6675,6674,1,0,0,0,6675,6676,1,0,
         0,0,6676,6677,1,0,0,0,6677,6679,5,5,0,0,6678,6673,1,0,0,0,6679,6682,
         1,0,0,0,6680,6678,1,0,0,0,6680,6681,1,0,0,0,6681,6690,1,0,0,0,6682,
-        6680,1,0,0,0,6683,6687,5,35,0,0,6684,6685,5,4,0,0,6685,6686,5,571,
+        6680,1,0,0,0,6683,6687,5,35,0,0,6684,6685,5,4,0,0,6685,6686,5,575,
         0,0,6686,6688,5,5,0,0,6687,6684,1,0,0,0,6687,6688,1,0,0,0,6688,6690,
         1,0,0,0,6689,6680,1,0,0,0,6689,6683,1,0,0,0,6690,6696,1,0,0,0,6691,
         6692,3,780,390,0,6692,6693,5,27,0,0,6693,6694,7,87,0,0,6694,6696,
@@ -57441,7 +57446,7 @@ export class PostgreSqlParser extends SQLParserBase {
         6734,1,0,0,0,6734,6737,1,0,0,0,6735,6737,5,390,0,0,6736,6720,1,0,
         0,0,6736,6721,1,0,0,0,6736,6722,1,0,0,0,6736,6723,1,0,0,0,6736,6724,
         1,0,0,0,6736,6725,1,0,0,0,6736,6729,1,0,0,0,6736,6731,1,0,0,0,6736,
-        6735,1,0,0,0,6737,659,1,0,0,0,6738,6739,5,2,0,0,6739,6740,5,571,
+        6735,1,0,0,0,6737,659,1,0,0,0,6738,6739,5,2,0,0,6739,6740,5,575,
         0,0,6740,6741,5,3,0,0,6741,661,1,0,0,0,6742,6744,5,389,0,0,6743,
         6745,5,374,0,0,6744,6743,1,0,0,0,6744,6745,1,0,0,0,6745,6747,1,0,
         0,0,6746,6748,3,534,267,0,6747,6746,1,0,0,0,6747,6748,1,0,0,0,6748,
@@ -57516,8 +57521,8 @@ export class PostgreSqlParser extends SQLParserBase {
         6933,6936,5,35,0,0,6934,6937,3,562,281,0,6935,6937,3,740,370,0,6936,
         6934,1,0,0,0,6936,6935,1,0,0,0,6937,7019,1,0,0,0,6938,6939,5,28,
         0,0,6939,7019,3,754,377,0,6940,6941,5,470,0,0,6941,7019,3,534,267,
-        0,6942,7019,5,571,0,0,6943,7019,5,573,0,0,6944,7019,5,563,0,0,6945,
-        7019,5,567,0,0,6946,6956,3,806,403,0,6947,6957,3,808,404,0,6948,
+        0,6942,7019,5,575,0,0,6943,7019,5,577,0,0,6944,7019,5,567,0,0,6945,
+        7019,5,571,0,0,6946,6956,3,806,403,0,6947,6957,3,808,404,0,6948,
         6949,5,2,0,0,6949,6951,3,736,368,0,6950,6952,3,586,293,0,6951,6950,
         1,0,0,0,6951,6952,1,0,0,0,6952,6953,1,0,0,0,6953,6954,5,3,0,0,6954,
         6955,3,808,404,0,6955,6957,1,0,0,0,6956,6947,1,0,0,0,6956,6948,1,
@@ -57527,7 +57532,7 @@ export class PostgreSqlParser extends SQLParserBase {
         1,0,0,0,6965,6966,1,0,0,0,6966,6971,1,0,0,0,6967,6968,3,660,330,
         0,6968,6969,3,808,404,0,6969,6971,1,0,0,0,6970,6963,1,0,0,0,6970,
         6967,1,0,0,0,6971,7019,1,0,0,0,6972,7019,5,96,0,0,6973,7019,5,60,
-        0,0,6974,7019,5,78,0,0,6975,7019,5,574,0,0,6976,6977,5,2,0,0,6977,
+        0,0,6974,7019,5,78,0,0,6975,7019,5,578,0,0,6976,6977,5,2,0,0,6977,
         6978,3,674,337,0,6978,6979,5,3,0,0,6979,6980,3,754,377,0,6980,7019,
         1,0,0,0,6981,6983,5,40,0,0,6982,6984,3,674,337,0,6983,6982,1,0,0,
         0,6983,6984,1,0,0,0,6984,6986,1,0,0,0,6985,6987,3,748,374,0,6986,
@@ -57776,13 +57781,13 @@ export class PostgreSqlParser extends SQLParserBase {
         3,752,376,0,7660,7662,1,0,0,0,7661,7657,1,0,0,0,7661,7658,1,0,0,
         0,7662,807,1,0,0,0,7663,7666,3,810,405,0,7664,7665,5,487,0,0,7665,
         7667,3,810,405,0,7666,7664,1,0,0,0,7666,7667,1,0,0,0,7667,809,1,
-        0,0,0,7668,7680,5,558,0,0,7669,7680,5,560,0,0,7670,7674,5,562,0,
-        0,7671,7673,5,588,0,0,7672,7671,1,0,0,0,7673,7676,1,0,0,0,7674,7672,
+        0,0,0,7668,7680,5,562,0,0,7669,7680,5,564,0,0,7670,7674,5,566,0,
+        0,7671,7673,5,592,0,0,7672,7671,1,0,0,0,7673,7676,1,0,0,0,7674,7672,
         1,0,0,0,7674,7675,1,0,0,0,7675,7677,1,0,0,0,7676,7674,1,0,0,0,7677,
-        7680,5,589,0,0,7678,7680,5,584,0,0,7679,7668,1,0,0,0,7679,7669,1,
+        7680,5,593,0,0,7678,7680,5,588,0,0,7679,7668,1,0,0,0,7679,7669,1,
         0,0,0,7679,7670,1,0,0,0,7679,7678,1,0,0,0,7680,811,1,0,0,0,7681,
         7683,7,29,0,0,7682,7681,1,0,0,0,7682,7683,1,0,0,0,7683,7684,1,0,
-        0,0,7684,7685,5,571,0,0,7685,813,1,0,0,0,7686,7692,3,822,411,0,7687,
+        0,0,7684,7685,5,575,0,0,7685,813,1,0,0,0,7686,7692,3,822,411,0,7687,
         7692,5,52,0,0,7688,7692,5,49,0,0,7689,7692,5,89,0,0,7690,7692,5,
         524,0,0,7691,7686,1,0,0,0,7691,7687,1,0,0,0,7691,7688,1,0,0,0,7691,
         7689,1,0,0,0,7691,7690,1,0,0,0,7692,815,1,0,0,0,7693,7698,3,814,
@@ -57798,8 +57803,8 @@ export class PostgreSqlParser extends SQLParserBase {
         1,0,0,0,7718,7715,1,0,0,0,7718,7716,1,0,0,0,7718,7717,1,0,0,0,7719,
         825,1,0,0,0,7720,7723,5,549,0,0,7721,7722,5,487,0,0,7722,7724,3,
         810,405,0,7723,7721,1,0,0,0,7723,7724,1,0,0,0,7724,7732,1,0,0,0,
-        7725,7732,3,808,404,0,7726,7732,5,550,0,0,7727,7732,5,554,0,0,7728,
-        7732,5,574,0,0,7729,7732,5,575,0,0,7730,7732,3,828,414,0,7731,7720,
+        7725,7732,3,808,404,0,7726,7732,5,550,0,0,7727,7732,5,558,0,0,7728,
+        7732,5,578,0,0,7729,7732,5,579,0,0,7730,7732,3,828,414,0,7731,7720,
         1,0,0,0,7731,7725,1,0,0,0,7731,7726,1,0,0,0,7731,7727,1,0,0,0,7731,
         7728,1,0,0,0,7731,7729,1,0,0,0,7731,7730,1,0,0,0,7732,827,1,0,0,
         0,7733,7734,7,109,0,0,7734,829,1,0,0,0,7735,7787,5,387,0,0,7736,
@@ -57936,7 +57941,7 @@ export class PostgreSqlParser extends SQLParserBase {
         1,0,0,0,8065,8047,1,0,0,0,8065,8048,1,0,0,0,8065,8049,1,0,0,0,8065,
         8056,1,0,0,0,8066,869,1,0,0,0,8067,8069,3,838,419,0,8068,8067,1,
         0,0,0,8068,8069,1,0,0,0,8069,8070,1,0,0,0,8070,8071,5,505,0,0,8071,
-        8074,3,314,157,0,8072,8073,5,506,0,0,8073,8075,5,571,0,0,8074,8072,
+        8074,3,314,157,0,8072,8073,5,506,0,0,8073,8075,5,575,0,0,8074,8072,
         1,0,0,0,8074,8075,1,0,0,0,8075,8076,1,0,0,0,8076,8077,5,68,0,0,8077,
         8078,5,35,0,0,8078,8079,3,674,337,0,8079,8080,3,882,441,0,8080,871,
         1,0,0,0,8081,8083,7,115,0,0,8082,8084,3,928,464,0,8083,8082,1,0,
