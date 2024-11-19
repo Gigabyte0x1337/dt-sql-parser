@@ -695,7 +695,7 @@ fragment StrictIdentifierChar: IdentifierStartChar | [0-9];
  * from lexical errors in the input.
  */
 
-QuotedIdentifier: UnterminatedQuotedIdentifier '"';
+QuotedIdentifier: (UnterminatedQuotedIdentifier '"') | CurlyQuotedIdentifier;
 // This is a quoted identifier which only contains valid characters but is not terminated
 
 UnterminatedQuotedIdentifier: '"' ('""' | ~ [\u0000"])*;
