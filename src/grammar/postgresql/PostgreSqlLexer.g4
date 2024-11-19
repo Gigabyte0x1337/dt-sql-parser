@@ -705,6 +705,21 @@ InvalidQuotedIdentifier: InvalidUnterminatedQuotedIdentifier '"';
 // This is a quoted identifier which is unterminated and contains a \u0000 character
 
 InvalidUnterminatedQuotedIdentifier: '"' ('""' | ~ '"')*;
+
+/* Curly-Brace Identifiers
+ * 
+ * These rules handle identifiers enclosed in curly braces, allowing similar recovery and distinction
+ * as with quoted identifiers.
+ */
+
+CurlyQuotedIdentifier: UnterminatedCurlyQuotedIdentifier '}';
+
+UnterminatedCurlyQuotedIdentifier: '{' (StrictIdentifierChar | '$')*;
+
+InvalidCurlyQuotedIdentifier: InvalidUnterminatedCurlyQuotedIdentifier '}';
+
+InvalidUnterminatedCurlyQuotedIdentifier: '{' (StrictIdentifierChar | '$' | ~ '}')*;
+
 /* Unicode Quoted Identifiers
  * 
  * These are divided into four separate tokens, allowing distinction of valid Unicode quoted
