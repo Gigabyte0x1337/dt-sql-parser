@@ -695,7 +695,7 @@ fragment StrictIdentifierChar: IdentifierStartChar | [0-9];
  * from lexical errors in the input.
  */
 
-QuotedIdentifier: (UnterminatedQuotedIdentifier '"') | CurlyQuotedIdentifier;
+QuotedIdentifier: (UnterminatedQuotedIdentifier '"') | CurlyQuotedIdentifier | BracketIdentifier;
 // This is a quoted identifier which only contains valid characters but is not terminated
 
 UnterminatedQuotedIdentifier: '"' ('""' | ~ [\u0000"])*;
@@ -719,6 +719,21 @@ UnterminatedCurlyQuotedIdentifier: '{' (StrictIdentifierChar | '$')*;
 InvalidCurlyQuotedIdentifier: InvalidUnterminatedCurlyQuotedIdentifier '}';
 
 InvalidUnterminatedCurlyQuotedIdentifier: '{' (StrictIdentifierChar | '$' | ~ '}')*;
+
+/* Bracket Identifiers
+ * 
+ * These are divided into four separate tokens, allowing distinction of valid bracket identifiers
+ * from invalid bracket identifiers without sacrificing the ability of the lexer to reliably recover
+ * from lexical errors in the input.
+ */
+
+BracketIdentifier: UnterminatedBracketIdentifier ']';
+
+UnterminatedBracketIdentifier: '[' (StrictIdentifierChar | '$')*;
+
+InvalidBracketIdentifier: InvalidUnterminatedBracketIdentifier ']';
+
+InvalidUnterminatedBracketIdentifier: '[' (StrictIdentifierChar | '$' | ~ ']')*;
 
 /* Unicode Quoted Identifiers
  * 
